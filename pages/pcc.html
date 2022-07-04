@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Load Balancing Pcc </title>
+    <meta content='Load Balancing Pcc' name='description'/>
+    <meta content='port game, nth, pcc, vpn, setting mikrotik, mikrotik, router, termux, mikhmon, hotspot, wifi' name='keywords'/>
+    <meta content='index, follow, noodp' name='robots'/>
+    <meta property="og:title" content="Load Balancing Pcc">
+    <meta property="og:description" content="Load Balancing Pcc">
+    <meta property="og:image:alt" content="Load Balancing Pcc">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bhscriptgenerator.github.io/pcc.html">
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- Icons -->
+  <link href="/assets/vendor/nucleo/css/nucleo-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body class="g-sidenav-show" style=" background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 51%, rgba(0,212,255,1) 100%);">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" target="_blank">
+        <img src="../assets/img/home.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white">Dashboard Tools</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mt-1">
+          <h6 class="ps-2 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-5">+ List Script</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white  " href="trafik1.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            </div>
+            <span class="nav-link-text ms-1">- Script Trafik Part 1</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="trafik2.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            </div>
+            <span class="nav-link-text ms-1">- Script Trafik Part 2</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="telegram.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            </div>
+            <span class="nav-link-text ms-1">- Script Monitoring </span>
+          </a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link text-white bg-gradient-primary " href="pcc.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            </div>
+            <span class="nav-link-text ms-1">- Load Balancing Pcc </span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <div class="mx-3">
+        <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Open Blog Balehotspot</a>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg "  id="app">
+   
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape  text-center border-radius-xl mt-n4 position-absolute" >
+                <img src="../assets/img/facebook.png" class="navbar-brand-img h-100" alt="main_logo">
+              </div>
+              <div class="text-end pt-1">
+                <h4 class="mb-0"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fbalehotspot.id&width=90&layout=button_count&action=like&size=small&share=false&height=21&appId=1780665628989695" width="90" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></h4>
+              </div>
+            </div>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0"><i class="fa fa-arrow-up text-success" aria-hidden="true"></i> Ikuti Kami di Facebook</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape  text-center border-radius-xl mt-n4 position-absolute">
+                 <img src="../assets/img/sa.png" class="navbar-brand-img h-100" alt="main_logo">
+              </div>
+              <div class="text-end pt-1">
+                <h4 class="mb-0">Saweria</h4>
+              </div>
+            </div>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0"><i class="fa fa-arrow-up text-success" aria-hidden="true"></i><a href="https://saweria.co/balehotspot" style="color: black; text-decoration: none;"> saweria.co/balehotspot</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape  text-center border-radius-xl mt-n4 position-absolute">
+                <img src="../assets/img/v.png" class="navbar-brand-img h-100" alt="main_logo">
+              </div>
+              <div class="text-end pt-1">
+                <h4 class="mb-0">Views</h4>
+              </div>
+            </div>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0"><i class="fa fa-arrow-up text-success" aria-hidden="true"></i> </p>
+            </div>
+          </div>
+        </div>
+
+         <div class="mx-1">
+        <a class="btn bg-gradient-danger mt-4 w-100"  type="button">SCRIPT LB PCC FULL SCRIPTS</a>
+      </div>
+      </div>
+      
+      <div class="row mb-4 mt-4"  >
+       
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <div class="card-header pb-0">
+              <h6>Button Input</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-down text-success" aria-hidden="true"></i>
+                Isikan dengan nama interface WAN dan Gateway IP WAN 
+              </p>
+            </div>
+            <div class="row" >
+              <div class="col m-3">
+                        <br />
+                        <form  onsubmit="event.preventDefault()"
+                          >
+
+                        <div class="form-floating">                              
+                         <div class="row">
+                          <div class="form col-md-6 mb-3">
+                            <label for="exampleInputEmail1">Name ISP-WAN</label>
+                            <input type="text" class="form-control" name="nm_ip1" id="nm_ip1" placeholder="Ex: ether1">
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="exampleInputEmail1">Gateway ISP-WAN</label>
+                            <input type="text" class="form-control" name="ip_ether1" id="ip_ether1" placeholder="Ex: 192.168.1.1">   
+                          </div>
+                        </div>                        
+                            </div>
+                            <div class="form">                              
+                         <div class="row">
+                          <div class="col-sm-6 mb-3">
+                            <input type="text" class="form-control" name="nm_ip2" id="nm_ip2" placeholder="Ex: ether2">
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            
+                            <input type="text" class="form-control" name="ip_ether2" id="ip_ether2" placeholder="Ex: 192.168.2.1" >   
+                          </div>
+
+                        </div>    
+                        <div class="row">
+                          <div class="col-sm-6 mb-3">
+                            
+                            <input type="text" class="form-control" name="nm_ip3" id="nm_ip3" placeholder="Ex: ether3" >
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            
+                            <input type="text" class="form-control" name="ip_ether3" id="ip_ether3" placeholder="Ex: 192.168.3.1" >   
+                          </div>
+                          
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6 mb-3">
+                            
+                            <input type="text" class="form-control" name="nm_ip4" id="nm_ip4" placeholder="Ex: ether4" >
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            
+                            <input type="text" class="form-control" name="ip_ether4" id="ip_ether4" placeholder="Ex: 192.168.4.1" >   
+                          </div>
+                          
+                        </div>                      
+                            </div>
+                           <form>
+                            <label for="exampleInputPassword1"
+                                    > PCC both-addresses-and-ports</label
+                                >
+                              <div class="form-row">
+                                <div class="col">
+                                  <input type="text" name="pcc1" id="pcc1" class="form-control" >
+                                </div>
+                                <div class="col">
+                                  <input type="text" name="pcc2" id="pcc2" class="form-control">
+                                </div>
+                                <div class="col">
+                                  <input type="text"name="pcc3" id="pcc3" class="form-control">
+                                </div>
+                                <div class="col">
+                                  <input type="text" name="pcc4" id="pcc4" class="form-control">
+                                </div>
+                              </div>
+                              </form>
+                            <!-- <div class="form-group">
+                                <label for="exampleInputPassword1"
+                                    >Routing Game</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Ex: 192.168.2.1"
+                                    id="ipisp2"
+                                />
+                                <small
+                                    id="emailHelp"
+                                    class="form-text text-muted"
+                                    
+                                    >Isikan Gateway ISP Tertentu Untuk Routing Game 
+                                    <span style="color: red;">| Kosongkan Jika Tidak di gunakan</span>
+                                </small>
+
+                            </div> -->
+                            
+                            <hr />
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                onclick="vm.kirim()"
+                            >
+                                Generate
+                            </button>
+                        </form>                         
+                    </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-lg-8 col-md-6 mb-md-0 mb-4" >
+          <div class="card">
+            <div class="card-header pb-0">
+              <div class="row">
+                <div class="col-lg-6 col-7">
+                  <h6>Script Output</h6>
+                  <p class="text-sm">
+                    <i class="fa fa-arrow-down text-success" aria-hidden="true"></i>
+                    Copy script ke terminal mikrotik
+                  </p>
+                </div>
+               
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive">
+              <div class="col-sm-8 border-primary">
+                        <div
+                            id="tebel-data"
+                            style="
+                                background: white;
+                                color: black;  
+                                height: 650px;
+                                overflow-y: scroll;
+                                overflow-x: scroll;
+                                padding: 10px;
+                                width: 1900px;
+                            "
+                        >
+                        /ip firewall address-list <br>
+                        add list=IP-LOCAL address=0.0.0.0/8  <br>
+                        add list=IP-LOCAL address=10.0.0.0/8 <br>
+                        add list=IP-LOCAL address=100.64.0.0/10 <br>
+                        add list=IP-LOCAL address=127.0.0.0/8 <br>
+                        add list=IP-LOCAL address=169.254.0.0/16 <br>
+                        add list=IP-LOCAL address=172.16.0.0/12 <br>
+                        add list=IP-LOCAL address=192.0.0.0/24 <br>
+                        add list=IP-LOCAL address=192.0.2.0/24 <br>
+                        add list=IP-LOCAL address=192.168.0.0/16 <br>
+                        add list=IP-LOCAL address=198.18.0.0/15 <br>
+                        add list=IP-LOCAL address=198.51.100.0/24 <br>
+                        add list=IP-LOCAL address=203.0.113.0/24 <br>
+                        add list=IP-LOCAL address=224.0.0.0/4 <br>
+                        add list=IP-LOCAL address=240.0.0.0/4 <br><br>
+                      /ip route <br>
+                      add check-gateway=ping distance=1 gateway="<span class="text-danger">{{ip_ether1}}</span>" routing-mark="to-<span class="text-danger">{{nm_ip1}}</span>" comment="IP Route " <br>
+                      add check-gateway=ping distance=1 gateway="<span class="text-danger">{{ip_ether2}}</span>" routing-mark="to-<span class="text-danger">{{nm_ip2}}</span>" <br>
+                      <span v-if="isp2==true">add check-gateway=ping distance=1 gateway="{{ip_ether3}}" routing-mark="to-{{nm_ip3}}" </span><br>
+                      <span v-if="pppoe==true">add check-gateway=ping distance=1 gateway="{{ip_ether4}}" routing-mark="to-{{nm_ip4}}" </span><br>
+                      add check-gateway=ping distance=1 gateway="{{ip_ether1}}"  <br>
+                      add check-gateway=ping distance=2 gateway="{{ip_ether2}}"   <br>
+                      <span v-if="pppoe==true">add check-gateway=ping distance=3 gateway="{{ip_ether3}}"  </span> <br>
+                      <span v-if="isp2==true">add check-gateway=ping distance=4 gateway="{{ip_ether4}}"  </span><br><br>
+
+                      /ip firewall mangle <br>
+                      add action=accept chain=prerouting dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>
+                      add action=accept chain=postrouting dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>
+                      add action=accept chain=forward dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>
+                      add action=accept chain=input dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>
+                      add action=accept chain=output dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>
+                      add action=mark-connection chain=input in-interface="<span class="text-danger">{{nm_ip1}}</span>" new-connection-mark="cm-<span class="text-danger">{{nm_ip1}}</span>" passthrough=yes comment="Mark Connection" <br>
+                      add action=mark-connection chain=input in-interface="<span class="text-danger">{{nm_ip2}}</span>" new-connection-mark="cm-<span class="text-danger">{{nm_ip2}}</span>" passthrough=yes <br>
+                      <span v-if="isp2==true">add action=mark-connection chain=input in-interface="{{nm_ip3}}" new-connection-mark="cm-{{nm_ip3}}" passthrough=yes</span><br>
+                      <span v-if="pppoe==true">add action=mark-connection chain=input in-interface="{{nm_ip4}}" new-connection-mark="cm-{{nm_ip4}}" passthrough=yes </span> <br>
+                      add action=mark-routing chain=output connection-mark="cm-{{nm_ip1}}" new-routing-mark="to-{{nm_ip1}}" passthrough=yes comment="Mark Routing" <br>
+                      add action=mark-routing chain=output connection-mark="cm-{{nm_ip2}}" new-routing-mark="to-{{nm_ip2}}" passthrough=yes <br>
+                      <span v-if="isp2==true">add action=mark-routing chain=output connection-mark="cm-{{nm_ip3}}" new-routing-mark="to-{{nm_ip3}}" passthrough=yes </span><br>
+                      <span v-if="pppoe==true">add action=mark-routing chain=output connection-mark="cm-{{nm_ip4}}" new-routing-mark="to-{{nm_ip4}}" passthrough=yes </span><br>
+                      add action=mark-connection chain=prerouting dst-address-list=!IP-LOCAL dst-address-type=!local new-connection-mark="cm-{{nm_ip1}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:{{pcc1}} src-address-list=IP-LOCAL comment="PCC Loadbalnce" <br>
+                      add action=mark-connection chain=prerouting dst-address-list=!IP-LOCAL dst-address-type=!local new-connection-mark="cm-{{nm_ip2}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:{{pcc2}} src-address-list=IP-LOCAL <br>
+                      <span v-if="isp2==true">add action=mark-connection chain=prerouting dst-address-list=!IP-LOCAL dst-address-type=!local new-connection-mark="cm-{{nm_ip3}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:{{pcc3}} src-address-list=IP-LOCAL </span><br>
+                    <span v-if="pppoe==true">add action=mark-connection chain=prerouting dst-address-list=!IP-LOCAL dst-address-type=!local new-connection-mark="cm-{{nm_ip4}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:{{pcc4}} src-address-list=IP-LOCAL </span><br>
+
+                    add action=mark-routing chain=prerouting connection-mark="cm-{{nm_ip1}}" dst-address-list=!IP-LOCAL new-routing-mark="to-{{nm_ip1}}" passthrough=yes src-address-list=IP-LOCAL <br>
+
+                    add action=mark-routing chain=prerouting connection-mark="cm-{{nm_ip2}}" dst-address-list=!IP-LOCAL new-routing-mark="to-{{nm_ip2}}" passthrough=yes src-address-list=IP-LOCAL  <br>
+
+                    <span v-if="isp2==true">add action=mark-routing chain=prerouting connection-mark="cm-{{nm_ip3}}" dst-address-list=!IP-LOCAL new-routing-mark="to-{{nm_ip3}}" passthrough=yes src-address-list=IP-LOCAL  </span> <br>
+
+                    <span v-if="pppoe==true">add action=mark-routing chain=prerouting connection-mark="cm-{{nm_ip4}}" dst-address-list=!IP-LOCAL new-routing-mark="to-{{nm_ip4}}" passthrough=yes src-address-list=IP-LOCAL  </span>
+                        </div>
+                    </div>
+
+              </div><hr>
+              <!-- Button trigger modal -->
+             <i class="m-3">© Copyright 2020-2022 <span style="color: red;">bhscriptgenerator.github.io</span> | Creator by Balehotspot</i>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </main>
+
+  <!--   Core JS Files   -->
+ 
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+   <script type="text/javascript">
+            var vm = new Vue({
+                el: "#app",
+                data: {
+                    ip_ether1: "",
+                    nm_ip1: "",
+                    ip_ether2: "",
+                    nm_ip2: "",
+                    ip_ether3: "",
+                    nm_ip3: "",
+                    ip_ether4: "",
+                    nm_ip4: "",
+                    pcc1: "",
+                    pcc2: "",
+                    pcc3: "",
+                    pcc4: "",
+                    isp2 : false,
+                    pppoe: false,
+                    
+                },
+                methods: {
+                    kirim() {
+                        this.ip_ether1 = document.getElementById("ip_ether1").value;
+                        this.nm_ip1 = document.getElementById("nm_ip1").value;                        
+                        this.ip_ether2 = document.getElementById("ip_ether2").value;
+                        this.nm_ip2 = document.getElementById("nm_ip2").value;
+                        this.ip_ether3 = document.getElementById("ip_ether3").value;
+                        this.nm_ip3 = document.getElementById("nm_ip3").value;
+                        this.ip_ether4 = document.getElementById("ip_ether4").value;
+                        this.nm_ip4 = document.getElementById("nm_ip4").value;
+                        this.pcc1 = document.getElementById("pcc1").value;
+                        this.pcc2 = document.getElementById("pcc2").value;
+                        this.pcc3 = document.getElementById("pcc3").value;
+                        this.pcc4 = document.getElementById("pcc4").value;
+                       
+
+                        if(this.ip_ether3!=''){
+                            this.isp2=true;
+                        }
+                        if(this.ip_ether4!=''){
+                            this.pppoe=true;
+                        }
+
+
+                    }       
+                },
+            });
+        </script>
+<script src="../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
